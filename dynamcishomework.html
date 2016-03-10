@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+    <title>TODO supply a title</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <style>
+        #outer {
+            position: inherit;
+            top:55%;
+            left:45%;
+            background-color: darkcyan;
+        width: 99em;
+        height: 99em;
+        
+        }
+        #inner {
+            top:55%;
+            left:65%;
+            clear: both;
+        vertical-align: auto;
+        background-color: turquoise;
+        cursor: pointer;
+            }
+    </style>
+
+</head>
+<body>
+<div id="outer">
+    <span id="inner">
+        HELLO WORLD
+    </span>
+</div>
+        <script>
+            $('#inner').hover(
+            function() {
+                $(this).css('background-color',"red");
+              },
+               function() {
+                   $(this).css("background-color","blue");
+               
+               }
+            );
+                </script>
+</body>
+</html>
