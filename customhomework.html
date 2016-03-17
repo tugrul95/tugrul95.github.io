@@ -13,7 +13,27 @@ and open the template in the editor.
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js">
             
         </script>
-    
+     <style>
+        #fields {
+            position: absolute;
+            margin-left: auto;
+            margin-top:calc;
+            background-color: darkcyan;
+        width: 99em;
+        height: 99em;
+        
+        }
+        #error {
+            top:55%;
+            left:65%;
+            padding-top: 10%;
+            padding-right: 15%;
+            clear: both;
+        vertical-align: auto;
+        background-color: turquoise;
+        cursor: pointer;
+            }
+    </style>
     </head>
     
     <body>
@@ -38,7 +58,9 @@ and open the template in the editor.
         <div id="error"> </div>
         <script>
 var i = 1;
-            
+            function eorrino() {
+                
+            }
             function calculate() {
                 var in1 = parseInt($('#input1').val());
                 var in2 = parseInt($('#input2').val());
@@ -48,11 +70,11 @@ var i = 1;
                 } else {
                     $('#error').html("You made "+ i +" mistake");
                     i++;
-                }
+                } 
             }
 
             function checkInput1(in1,in2) {
-                if(isNaN(in1) || isNaN(in2)) { // || means OR; && means AND; ! means NOT
+                if(!!isNaN(in1) && !!isNaN(in2)) { // || means OR; && means AND; ! means NOT
                     return false;
                 }
                 return true;
@@ -77,5 +99,13 @@ var i = 1;
                 return true;
             }
     </script>
+        <button onclick="myFunction()">calc</button>
+
+        <script>
+function myFunction() {
+    <button onclick="myFunction()">Try it</button>
+    alert("DO NOT MISTAKEN MORE THAN 3 INSTEAD YOU WİLL BLOCK ");
+}
+</script>
     </body>
 </html>
