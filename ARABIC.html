@@ -1,0 +1,113 @@
+ <html lang="en">
+<head>
+    
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"></script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/jquery-ui.min.js"></script>
+ 
+<meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"></script>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/jquery-ui.min.js"></script>
+
+        <title>BURJALARAB</title>
+
+        <style>
+            #texts{
+                position: absolute;
+                top: 10px;
+                left:10px;
+                width: 300px;
+                height: 300px;
+                background-color: yellow;
+            }
+            #numbers{
+                position: absolute;
+                top: 200px;
+                left: 500px;
+                width: 100px;
+                width: 100px;
+                background-color: activeborder;
+            }
+        </style>
+
+    </head>
+    <body>
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $("#numbers").draggable();
+                $("#texts").droppable(
+                        {
+                            drop: function () {
+                                $("#numbers").draggable("disable");
+                                $("#texts").draggable("disable");
+                                $("#texts").css("background-color", "cyan").html("");
+                                $("#numbers").css("background-color", "cyan").html("");
+                                
+                                
+                            }
+                            
+                            
+                        }
+                                
+                );
+        
+            });
+        </script>
+        <div>
+            <ul id="texts">
+            </ul> 
+            <ul id="numbers">
+            </ul>
+        </div>
+        <script type="text/javascript">
+            var şey1 = '#numbers';
+            var şey2 = '#texts';
+            var id = 0;
+            $().ready(function () {
+                for (var i = 1; i < 11; i++) {
+                    $(şey1).append(
+                            "<li id='" + i + "' class='integer'>" +
+                            i + "</li>");
+                    $('#' + i).draggable();
+                }
+            });
+            var numbers = [ SAĞBAŞTANSAAAAAAAAAAAAY0 = [".", "١", "۲", "۳", "۴", "۵", "۶", "۷", "۸", "۹"]
+            ];
+            function yeniFonksiyon(array) {
+                var list = document.createElement('ul');
+                for (var i = 0; i < array.length; i++) {
+                    var item = document.createElement('li');
+                    item.appendChild(document.createTextNode(array[i]));
+                    list.appendChild(item);
+                }
+                return list;
+            }
+            document.getElementById('texts').appendChild(yeniFonksiyon(numbers[0]));
+            for (var i = 1; i < 11; i++) {
+                $('#' + 'A' + i).droppable({drop: function (event, ui) {
+                        var di = ui.draggable.attr("id");
+                        var numId = this.id.replace('A', '');
+                        if (di === numId) {
+                            $('#' + di).draggable("disable");
+                            $('#' + numId).html("&nbsp;").css("background-color", "blue");
+                        }
+                            else {
+                                alert("DONOT DRAG ENOUGH YOU DONT KNOW WTHİS LANGUAGE");
+                            }
+                    }});
+            }
+            $.fn.randomize = function (selector) {
+                var $elems = selector ? $(this).find(selector) : $(this).children(),
+                        $parents = $elems.parent();
+                $parents.each(function () {
+                    $(this).children(selector).sort(function () {
+                        return Math.round(Math.random()) - 0.5;
+                        // }). remove().appendTo(this); // 2014-05-24: Removed `random` but leaving for reference. See notes under 'ANOTHER EDIT'
+                    }).detach().appendTo(this);
+                });
+                return this;
+            };
+            $('ul').randomize();
+        </script>        
+    </body>
+</html>
