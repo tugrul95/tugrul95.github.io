@@ -6,82 +6,147 @@ and open the template in the editor.
 -->
 <html>
     <head>
-<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"></script>
-        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/jquery-ui.min.js"></script>
-    <title>işte taraftar</title>
-    
-<style>
-    html, body {
-		height: 100%; margin:0; padding:0;
-	}
-        
-    #tablorini {
-        text-align: center;
-        display:block;
-        width:100%;
-        height: 100%;
-        margin:0;
-        padding:0;
-    }
-    #tablorini tbody{width:100%; height: 100%; display:block;}
-    #tablorini tr{
-        width:100%; display:table; height:33% !important; 
-    }
-    #tablorini tr td{
-        width:33%; display:table-cell; vertical-align: middle; font-size:24px; 
-    }
-</style>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script language="JavaScript">
+            
+<!--
 
-        
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
-<body>
-    
-    <a href="http://localhost:8383/HTML5Applicationgithub/forms.html" style="color: yellowgreen" target="_blank"><p>Crazy Button<br/>FormHomework<br/></p> </a>
-    
-    <a href="http://localhost:8383/HTML5Applicationgithub/tablehomework.html" target="_blank">Table Homework</a>
-    <a href="http://tugrul95.github.io/GERMAN NUMBERS.html">NUMBER GAMES</a>
-  
-    <table class="h1z1">
-            <tbody>
-                <tr>
-                <td>F</td>
-                <td>E</td>
-                <td>N</td></tr>
-            <tr><td>E</td>
-                <td>R</td>
-                <td>B</td></tr>
-            <tr><td>A</td>
-                <td>H</td>
-                <td>Ç</td></tr>
-            </tbody>
-          </table>
-    
-    <div>
-        <form id="f1" action=""> 
-        <p>Name<input type="text" name="login" placeholder="login" > </p>
-        <p>Password<input type="text" name="password" placeholder="password" > </p> 
-        <p>Adress<input type="text" name="adress or phone number" placeholder="adress or phone number or type T.C Number"></p>
-        <input type="submit" name="submit" />
-                    </div>
-<div class="container"> 
-    <form id="f2" action="">
-        <p>Favoruite Hobby?</p>
-        <p><input type="radio" name="hobby" /> Hanging Out</p>
-        <p><input type="radio" name="hobby" /> Drinking</p>
-        <p><input type="radio" name="hobby" /> Becoming Drunk</p>
-    
-</div>
-  
-      
+function calculateBmi() {
+var weight = document.bmiForm.weight.value
+var height = document.bmiForm.height.value
+if(weight > 0 && height > 0){	
+var finalBmi = weight/(height/100*height/100)
+document.bmiForm.bmi.value = finalBmi
+if(finalBmi < 18.5){
+document.bmiForm.meaning.value = "That you are too thin."
+}
+if(finalBmi > 18.5 && finalBmi < 25){
+document.bmiForm.meaning.value = "That you are healthy."
+}
+if(finalBmi > 25){
+document.bmiForm.meaning.value = "That you have overweight."
+}
+}
+else{
+alert("Please Fill in everything correctly")
+}
+}
+//-->
+</script>
+    </head>
+    <body>
+      <button type="button" onclick="myFunction()">Set background image</button>
+      <script>
+function myFunction() {
+    document.body.style.backgroundColor = "#f3f3f3";
+    document.body.style.backgroundImage = "url('http://api.ning.com/files/a5b4X5Lcvi2DlKtEUjEZN2EjHFDkEf5iVX7AXyQlYAKzQCAhZ858xN7cXIVREMWtqwmqOCdNFxdMzwy3d9lcCE*PuiRmaBMq/childhoodobesity2.jpg')";
+}
+</script>
+<script>
+function HowMany(form) {
+    document.body.style.backgroundColor = "#f3f3f3";
+    document.body.style.backgroundImage = "url('https://static2.stuff.co.nz/1328955548/014/6404014.jpg')";
+}
+</script>
+        <script type="text/javascript">
+jQuery(function($) {
+  $('#my_img').click(function() {
+    alert("EAT LESS!!!")
+  });
+});
+</script>
+        <form name="bmiForm">
+Your Weight(kg): <input type="text" name="weight" size="10"><br />
+Your Height(cm): <input type="text" name="height" size="10"><br />
+<input type="button" value="Calculate BMI" onClick="calculateBmi()"><br />
+Your BMI: <input type="text" name="bmi" size="10"><br />
+This Means: <input type="text" name="meaning" size="25"><br />
+<input type="reset" value="Reset" />
+</form>
+        <script>
+var myWeight;
+var myDistance;
 
-    
-   
-    
+function HowMany(form)
+{
+var difference;
+difference = (myDistance * myWeight) * .653;
+form.Fdiff.value = difference;
+ document.getElementById('btn').onclick = function() {
+           
 
-</body>
+            
+if (difference < 100) {
+form.comment.value="You better start working!";
+}
+if (difference > 101 && difference < 200) {
+form.comment.value="Nice run, but you can do better.";
+}
+if (difference > 201 && difference < 300) {
+form.comment.value="Very good! Push above 300 next time.";
+}
+if (difference > 301 && difference < 500) {
+form.comment.value="Great! Your a runner.....keep it up!";
+}
+if (difference > 501 && difference < 700) {
+form.comment.value="Bill Rogers move over!";
+}
+if (difference > 701) {
+form.comment.value="Your my hero! Have a jelly doughnut."; 
+}
+
+}
+
+function SetMyWeight(weight)
+{
+myWeight = weight.value;
+}
+
+function SetmyDistance(dis)
+{
+myDistance = dis.value;
+}
+
+function ClearForm(form){
+
+form.myWeight.value = "";
+form.myDistance.value = "";
+form.Fdiff.value = "";
+form.comment.value = "";
+
+}
+
+
+</script>
+
+
+<center>
+<FORM METHOD="POST">
+<TABLE border=3>
+<TR>
+<TR>
+<TD><div align=center>Your<br>Weight</div></TD>
+<TD><div align=center>Miles<br>run</div></TD>
+<TD><div align=center>Calories<br>burned</div></TD>
+<TD><INPUT TYPE=BUTTON ONCLICK="HowMany(this.form)" VALUE="Calculate"></TD>
+</TR>
+<tr>
+<TD><div align=center><INPUT TYPE=text NAME=myWeight SIZE="4"ONCHANGE="SetMyWeight(this)"></div></TD>
+<TD><div align=center><INPUT TYPE=text NAME=myDistance SIZE="4"ONCHANGE="SetmyDistance(this)"></div></TD>
+<TD><div align=center><INPUT TYPE=text NAME="Fdiff" VALUE="" SIZE="6"></div></TD>
+<TD><div align=center><INPUT TYPE=BUTTON VALUE=" Reset " onClick="ClearForm(this.form)"></div></tr>
+</table>
+<table border=3>
+<tr>
+<TD><DIV ALIGN=CENTER>My Comment</DIV></TD>
+<TD><INPUT TYPE=text NAME="comment" size="37"></td>
+</TR>
+</TABLE>
+</FORM>
+</center>
+
+<font face="arial, helvetica" size="-2"></font></p>
+    </body>
 </html>
